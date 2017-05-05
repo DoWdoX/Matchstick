@@ -5,7 +5,7 @@
 ## Login   <DoWdoX@epitech.net>
 ## 
 ## Started on  Mon Feb 13 10:15:41 2017 DORIAN DEBOUT
-## Last update Tue Feb 28 15:12:01 2017 DORIAN DEBOUT
+## Last update Fri May  5 18:11:19 2017 DORIAN DEBOUT
 ##
 
 CC	=	gcc
@@ -26,16 +26,20 @@ SRCS	=	main.c		\
 
 OBJS	=	$(SRCS:.c=.o)
 
+CC	=	gcc
+
+RM	=	rm -rf
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(OBJS) -o $(NAME)
+	$(CC) -o $(NAME) $(OBJS)
 
 clean:
-	rm -rf $(OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
-	rm -rf $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
